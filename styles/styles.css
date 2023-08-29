@@ -22,6 +22,9 @@ body {
 /* ... Previous CSS rules ... */
 
 .cozy {
+    background-color: rgba(248, 246, 244, 1); /* Initial background color */
+    padding: 2rem 1rem; /* Adjust padding for mobile */
+    margin: 0; /* Remove negative margin */
     background-color: #f8f6f4;
     padding: 5rem 0;
     border-radius: 10px;
@@ -30,7 +33,6 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    margin: 50rem -50rem; /* Add margin to extend to the sides */
 }
 
 .cozy-content {
@@ -52,9 +54,9 @@ body {
 }
 
 .contact {
-    background-color: #ffffff;
+    background-color: transparent;
     padding: 4rem 0;
-    margin: 20rem -20rem;
+    margin: 0 auto;
 }
 
 .contact-content {
@@ -65,13 +67,13 @@ body {
 
 .contact h2 {
     font-size: 2rem;
-    color: #4a4a4a;
+    color: #000000;
     margin-bottom: 1.5rem;
 }
 
 .contact p {
     font-size: 1.1rem;
-    color: #6c6c6c;
+    color: #000000;
     margin-bottom: 1.5rem;
 }
 
@@ -224,7 +226,7 @@ main {
     left: 0;
     width: 100%;
     height: 100vh;
-    z-index: -2;
+    z-index: -3;
     overflow: hidden;
 }
 
@@ -272,11 +274,15 @@ main {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     margin-top: 3rem;
-    margin-bottom: 2rem; /* Add margin at the bottom to create space */
+    margin-bottom: 2rem;
+    /* Add the following properties to show the background after the menu section */
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+    overflow: hidden;
 }
 
 .menu-item {
-    background-color: #fff;
     border-radius: 10px;
     padding: 1.5rem;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
@@ -284,6 +290,13 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+}
+
+.menu-item-dark {
+    background-color: rgba(100, 100, 100, 0.2); /* Slightly transparent gray */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .social-icon {
@@ -332,14 +345,15 @@ footer {
 }
 
 .mission {
+    padding-top: 5rem;
     border-radius: 20px;
     position: relative;
     padding: 50px 0; /* Adjust as needed */
     background-color: #da5242; /* Add a solid background color */
     opacity: 1;
-    margin-top: 1rem;
+    margin-top: 10rem;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
-    margin: 20rem -20rem;
+    margin: 0rem -0rem;
 }
 
 .mission-content {
@@ -373,4 +387,27 @@ footer {
     background-position:c enter; /* Adjust as needed */
     transform: skewY(-0deg) translateZ(0);
     box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #f8f6f4;
+    z-index: -1;
+    opacity: 0; /* Start with opacity set to 0 */
+    transition: opacity 0.5s ease; /* Add a transition for opacity */
+}
+
+header, nav ul {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+header.fade-in, nav ul.fade-in {
+    opacity: 1;
+    transform: translateY(0);
 }
