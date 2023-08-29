@@ -1,0 +1,241 @@
+/* Reset some default styles */
+body, h1, h2, h3, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f6f4;
+    color: #4a4a4a;
+}
+
+/* ... Previous CSS rules ... */
+
+.cozy {
+    background-color: #f8f6f4;
+    padding: 4rem 0;
+}
+
+.cozy-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.cozy h2 {
+    font-size: 2rem;
+    color: #4a4a4a;
+    margin-bottom: 1rem;
+}
+
+.cozy p {
+    font-size: 1.1rem;
+    color: #6c6c6c;
+    margin-bottom: 2rem;
+}
+
+.contact {
+    background-color: #ffffff;
+    padding: 4rem 0;
+}
+
+.contact-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contact h2 {
+    font-size: 2rem;
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+}
+
+.contact p {
+    font-size: 1.1rem;
+    color: #6c6c6c;
+    margin-bottom: 1.5rem;
+}
+
+.contact a {
+    color: #aa8c67;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.contact a:hover {
+    color: #876b4f;
+}
+
+.social-icons {
+    margin-top: 1.5rem;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: translateY(-3px);
+}
+
+/* ... Rest of your CSS rules ... */
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #f8f6f4;
+    color: #4a4a4a;
+}
+
+header {
+    background-color: #ffffff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1rem 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 2rem;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.logo h1 {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #4a4a4a;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #aa8c67;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.hero {
+    background-image: url('hero.jpg');
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    color: #fff;
+    padding: 6rem 0;
+}
+
+.hero-content {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.btn-primary {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #aa8c67;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+}
+
+.btn-primary:hover {
+    background-color: #876b4f;
+}
+
+.menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.menu-item {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 1.5rem;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.menu-item img {
+    width: 100%;
+    max-height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.menu-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #4a4a4a;
+}
+
+.menu-item p {
+    font-size: 1rem;
+    color: #6c6c6c;
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 1.2rem;
+    color: #aa8c67;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #ffffff;
+    color: #4a4a4a;
+    font-size: 0.8rem;
+    box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
+}
