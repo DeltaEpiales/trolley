@@ -1,19 +1,25 @@
 document.addEventListener("DOMContentLoaded", function() {
-    // Get the hero section for the interactive background
-    const heroSection = document.querySelector(".hero");
-    const heroContent = document.querySelector(".hero-content");
+    const trolleyImage = document.querySelector(".trolley-image");
+    const ribbon = document.querySelector(".ribbon");
 
-    // Add event listeners for mouse movement
-    heroSection.addEventListener("mousemove", function(e) {
-        const moveX = (e.clientX - window.innerWidth / 2) / 10;
-        const moveY = (e.clientY - window.innerHeight / 2) / 10;
-        
-        // Apply parallax effect to the hero content
-        heroContent.style.transform = `translate(${moveX}px, ${moveY}px)`;
+    const trolleyStartPosition = {
+        x: trolleyImage.offsetLeft,
+        y: trolleyImage.offsetTop
+    };
+
+    document.addEventListener("mousemove", function(e) {
+        const moveX = (e.clientX - window.innerWidth / 2) / 20;
+        const moveY = (e.clientY - window.innerHeight / 2) / 20;
+
+        const newX = trolleyStartPosition.x + moveX;
+        const newY = trolleyStartPosition.y + moveY;
+
+        trolleyImage.style.transform = `translate(${newX}px, ${newY}px)`;
+        ribbon.style.transform = `translateX(${moveX}px)`;
     });
 
-    // Reset the hero content position on mouse leave
-    heroSection.addEventListener("mouseleave", function() {
-        heroContent.style.transform = "translate(0, 0)";
+    document.addEventListener("mouseleave", function() {
+        trolleyImage.style.transform = `translate(${trolleyStartPosition.x}px, ${trolleyStartPosition.y}px)`;
+        ribbon.style.transform = "translateX(0)";
     });
 });
