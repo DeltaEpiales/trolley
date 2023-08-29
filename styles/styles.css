@@ -151,7 +151,7 @@ nav a {
 }
 
 nav a:hover {
-    color: #da5242;
+    color: #ebc89e;
 }
 
 main {
@@ -255,7 +255,7 @@ main {
 .btn-primary {
     display: inline-block;
     padding: 10px 20px;
-    background-color: #100000;
+    background-color: #223b2c;
     color: #fff;
     font-weight: bold;
     border-radius: 5px;
@@ -266,7 +266,7 @@ main {
 }
 
 .btn-primary:hover {
-    background-color: #da5242;
+    background-color: #9fe5a2;
 }
 
 .menu {
@@ -338,7 +338,7 @@ main {
 footer {
     text-align: center;
     padding: 1.5rem;
-    background-color: #da5242;
+    background-color: #ebc89e;
     color: #4a4a4a;
     font-size: 0.8rem;
     box-shadow: 0px -2px 10px rgba(0, 0, 0, 0.1);
@@ -349,7 +349,7 @@ footer {
     border-radius: 20px;
     position: relative;
     padding: 50px 0; /* Adjust as needed */
-    background-color: #da5242; /* Add a solid background color */
+    background-color: #ebc89e; /* Add a solid background color */
     opacity: 1;
     margin-top: 10rem;
     box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
@@ -411,3 +411,28 @@ header.fade-in, nav ul.fade-in {
     opacity: 1;
     transform: translateY(0);
 }
+
+.tracking {
+    background-color: #f8f6f4;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.tracking-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.tracking h2 {
+    font-size: 2rem;
+    color: #4a4a4a;
+    margin-bottom: 1.5rem;
+}
+
+#map {
+    width: 100%;
+    height: 400px; /* Adjust height as needed */
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+

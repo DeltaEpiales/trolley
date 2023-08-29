@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=geometry"></script>
+    <script src="scripts/realtime.js"></script>
     <title>Trolley Car Coffee Co.</title>
 </head>
 <body>
@@ -11,7 +13,7 @@
     <header class="fade-in">
         <nav>
             <div class="logo">
-                <img src="images/trolleycoffeecobwlogo.png" alt="Trolley Car Coffee Co. Logo">
+                <img src="images/trolleycoffeecobwlogo2.png" alt="Trolley Car Coffee Co. Logo">
                 <h1>Trolley Car Coffee Co.</h1>
             </div>
             <ul class="fade-in">
@@ -77,6 +79,12 @@
                 <p>Step into our coffee shop and experience a world of coziness and relaxation. Our warm lighting, comfortable seating, and friendly staff create an inviting space where you can enjoy your favorite coffee blends or discover new ones. Whether you're here to work, catch up with friends, or simply unwind, our cozy atmosphere is designed to make you feel right at home.</p>
             </div>
         </section>
+        <section class="tracking">
+        <div class="tracking-content">
+            <h2>Trolley Tracking</h2>
+            <div id="map"></div>
+        </div>
+    </section>
 
     </main>
     <footer>        
@@ -87,7 +95,7 @@
                 <p>Email: <a href="mailto:info@trolleycarcoffeecompany.com">info@trolleycarcoffeecompany.com</a></p>
                     <div class="social-icons">
                     <a href="#"><img src="images/facebook.svg" alt="Facebook" class="social-icon"></a>
-                    <a href="#"><img src="images/instagram.png" alt="Instagram" class="social-icon"></a>
+                    <a href="https://www.instagram.com/trolleycarcoffeeco/"><img src="images/instagram.png" alt="Instagram" class="social-icon"></a>
                     <a href="#"><img src="images/twitter.svg" alt="Twitter" class="social-icon"></a>
                 </div>
             </div>

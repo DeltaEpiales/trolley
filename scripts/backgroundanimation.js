@@ -24,7 +24,7 @@ window.addEventListener('scroll', () => {
   background.style.opacity = opacity;
 
   // Update background color based on opacity
-  const grayOpacity = 0.9; // Adjust the opacity as needed
+  const grayOpacity = 0.6; // Adjust the opacity as needed
   cozySection.style.backgroundColor = `rgba(200, 200, 200, ${grayOpacity * opacity})`;
 
   // Apply opacity to all menu items
