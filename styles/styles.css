@@ -161,7 +161,7 @@ main {
 }
 
 .hero {
-    position: relative;
+    position: inherit;
     overflow: hidden; /* To ensure the video doesn't /*overflow */
     m*/in-height: 100vh; /* Set a minimum height to ensure full viewport coverage */
     text-align: center;
