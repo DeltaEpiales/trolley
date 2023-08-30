@@ -1,3 +1,68 @@
+.timeline {
+    position: relative;
+    background-color: #f8f9fa;
+    padding: 50px 0;
+    overflow: hidden;
+}
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    padding-left: 50px;
+}
+
+.timeline-date {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.timeline-content {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.carousel-inner {
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+    width: 40px;
+    height: 40px;
+    background-color: #f8f9fa;
+    color: #333;
+    opacity: 0.8;
+    transition: opacity 0.3s;
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+    opacity: 1;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background: none;
+    font-size: 24px;
+}
+
+.carousel-control-prev {
+    left: -50px;
+}
+
+.carousel-control-next {
+    right: -50px;
+}
+
+
 /* Reset some default styles */
 body, h1, h2, h3, p {
     margin: 0;
@@ -167,6 +232,7 @@ main {
     text-align: center;
     color: #fff;
     padding: 6rem 0;
+    z-index:-1;
 }
 
 .video-overlay {
@@ -183,7 +249,7 @@ main {
     flex-direction: column;
     background: rgba(100, 100, 100, 0.5); /* Adding a semi-transparent background */
     backdrop-filter: blur(5px);
-    z-index: -1;
+    z-index: 1;
     color: #fff;
     text-align: center;
     padding: 4rem 0;
@@ -240,7 +306,6 @@ main {
 .hero-content {
     max-width: 600px;
     margin: 0 auto;
-    z-index: 0;
 }
 
 .hero h2 {
@@ -254,9 +319,7 @@ main {
 }
 
 .btn-primary {
-    z-index:1;
     display: inline-block;
-    position: relative;
     padding: 10px 20px;
     background-color: #223b2c;
     color: #fff;
@@ -495,7 +558,7 @@ header.fade-in, nav ul.fade-in {
     top: calc(100% + 50px); /* Adjust the value to control the distance from the icon */
     background-color: #fff;
     box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.1);
-    z-index: 3;
+    z-index: 1001;
     text-align: center; /* Align menu items to the left */
 }
 
