@@ -124,7 +124,7 @@ nav {
 }
 
 .logo img {
-    width: 50px;
+    width: 100px;
     height: auto;
     margin-right: 10px;
 }
@@ -167,6 +167,7 @@ main {
     text-align: center;
     color: #fff;
     padding: 6rem 0;
+    z-index:-1;
 }
 
 .video-overlay {
@@ -402,7 +403,7 @@ footer {
 }
 
 header, nav ul {
-    opacity: 0;
+    opacity: 0.9;
     transform: translateY(-20px);
     transition: opacity 1s ease, transform 1s ease;
 }
@@ -435,4 +436,73 @@ header.fade-in, nav ul.fade-in {
     border-radius: 10px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
+.mobile-menu-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end; /* Aligns icon to the right */
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    position: relative; /* Change from 'absolute' to 'relative' */
+    margin-top: 20px; /* Adjust the vertical position as needed */
+    margin-right: 20px; /* Adjust the horizontal position as needed */
+    margin: 0 auto; /* Center the icon horizontally */
 
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-icon {
+        right: 20px; /* Adjust the spacing from the right for mobile devices */
+    }
+}
+
+.mobile-menu-icon .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: 0.4s;
+}
+
+
+/* Add styles to transform the bars into a cross icon when the menu is open */
+.mobile-menu-icon.open .bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.mobile-menu-icon.open .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-icon.open .bar:nth-child(3) {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+
+/* Show the mobile menu when it has the 'active' class */
+.mobile-menu-icon-container {
+    position: relative;
+    display: inline-block; /* Display inline to contain only the width of its content */
+}
+
+.mobile-menu.active {
+    display: block;
+    position: absolute;
+    left: -50px;
+    padding: 10px; /* Add padding to the popup menu */
+    top: calc(100% + 50px); /* Adjust the value to control the distance from the icon */
+    background-color: #fff;
+    box-shadow: -4px 0px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1001;
+    text-align: center; /* Align menu items to the left */
+}
+
+
+/* Hide the mobile menu by default */
+.mobile-menu {
+    display: none;
+}
+
+.mobile-menu li {
+        padding: 10px;
+}
