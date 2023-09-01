@@ -4,14 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_MAPS_API_KEY&libraries=geometry"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.4.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.4.0/firebase-auth.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js"></script>
+    <script type="module" src="/node_modules/firebase/firebase-app.js"></script>
+    <script type="module" src="/node_modules/firebase/firebase-auth.js"></script>
+    <script type="module" src="/node_modules/firebase/firebase-firestore.js"></script>
     <script src="scripts/realtime.js"></script>
+    <script type="module" src="src/index.js"></script>
+    <script type="module" src="src/firebase-config.js"></script>
     <link rel="stylesheet" href="styles/styles.css">
     <title>Trolley Car Coffee Co.</title>
 </head>
 <body>
     <!-- Include JavaScript file for functionality -->
     <script src="scripts/main.js"></script>
-    
     <!-- Header section -->
     <header class="fade-in">
         <nav>
@@ -30,10 +37,15 @@
                     <li><a href="menu/menu.html">Menu</a></li>
                     <li><a href="about/about.html">About Us</a></li>
                     <li><a href="#">Contact</a></li>
+                    <li id="loginNavItem"><a href="src/index.html">Login</a></li>
                 </ul>
             </div>
         </nav>
     </header>
+    <div class="mobile-menu" id="mobileMenu">
+        <!-- The content will be dynamically added here -->
+    </div>
+    
     
     <!-- Main content section -->
     <main>
