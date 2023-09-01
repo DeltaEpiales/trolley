@@ -3,7 +3,6 @@
 
 // Initialize Firebase
 import app from '../src/firebase-config';
-const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 
 const registrationForm = document.getElementById('registrationForm');
