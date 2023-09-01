@@ -2,7 +2,7 @@
 // Include your Firebase config here
 
 // Initialize Firebase
-import app from '../src/firebase-config';
+import app from '../src/firebase-config.js';
 const auth = getAuth();
 
 const registrationForm = document.getElementById('registrationForm');
