@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trolley Car Coffee - Create Account</title>
+    <!-- Include Firebase scripts -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.5.0/firebase-app.js"></script>
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.5.0/firebase-auth.js"></script>
+    <!-- Include your Firebase configuration -->
+    <script type="module" src="https://www.gstatic.com/firebasejs/9.4.0/firebase-firestore.js"></script>
+    <script type="module" src="..//node_modules/firebase/firebase-app.js"></script>
+    <script type="module" src="..//node_modules/firebase/firebase-auth.js"></script>
+    <script type="module" src="..//node_modules/firebase/firebase-firestore.js"></script>
+    <script src="scripts/realtime.js"></script>
+    <script type="module" src="../src/firebase-config.js"></script>
+    <script type="module" src="../src/index.js"></script>
+    <script type="module" src="../scripts/createAcc.js"></script>
+    <link rel="stylesheet" href="../styles/styles.css">
+    <link rel="stylesheet" href="../styles/createAcc.css">
+</head>
+<body>
+    <!-- Include JavaScript file for functionality -->
+    <script src="../scripts/main.js"></script>
+    <!-- Header section -->
+    <header class="fade-in">
+        <nav>
+            <div class="logo">
+                <img src="../images/trolleycoffeecobwlogo2.png" alt="Trolley Car Coffee Co. Logo">
+            </div>
+            <!-- Mobile menu icon and navigation links -->
+            <div class="mobile-menu-icon-container">
+                <div class="mobile-menu-icon">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <ul class="mobile-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../menu/menu.html">Menu</a></li>
+                    <li><a href="../about/about.html">About Us</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li id="loginNavItem"><a href="../src/index.html">Login</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <div class="mobile-menu" id="mobileMenu">
+        <!-- The content will be dynamically added here -->
+    </div>
+    <div class="container">
+        <h1>Create an Account</h1>
+        <form id="registrationForm">
+            <input type="text" id="displayName" placeholder="Display Name" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="password" id="password" placeholder="Password" required>
+            <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
+            <button type="submit">Register</button>
+        </form>
+        <div id="googleSignIn" class="google-signin">
+            <button id="googleSignInBtn" class="google-signin">Sign Up with Google</button>
+        </div>
+        <p>Already have an account? <a href="login.html">Login here</a></p>
+    </div>
+
+    <p id="errorText" style="color: red;"></p>
+
+      
+    <!-- Footer section -->
+    <footer>
+        <!-- Contact section -->
+        <section class="contact">
+            <div class="contact-content">
+                <h2>Contact Us</h2>
+                <p>Have a question or want to get in touch? Feel free to reach out to us! We're always here to chat about coffee, frogs, and everything in between. Connect with us on social media or send us an email.</p>
+                <p>Email: <a href="mailto:info@trolleycarcoffeecompany.com">info@trolleycarcoffeecompany.com</a></p>
+                    <div class="social-icons">
+                    <a href="#"><img src="../images/facebook.svg" alt="Facebook" class="social-icon"></a>
+                    <a href="https://www.instagram.com/trolleycarcoffeeco/"><img src="../images/instagram.png" alt="Instagram" class="social-icon"></a>
+                    <a href="https://twitter.com/TrolleyCoffeeAZ"><img src="../images/twitter.svg" alt="Twitter" class="social-icon"></a>
+                </div>
+            </div>
+        </section>
+        <p>&copy; 2023 Trolley Car Coffee Co.. All rights reserved.</p>
+    </footer>
+    <!-- firebase google scripts for sign in -->
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.2/firebase-auth-compat.js"></script>
+
+</body>
+</html>
