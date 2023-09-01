@@ -1,0 +1,31 @@
+name: Deploy to Firebase Hosting
+
+on:
+  push:
+    branches:
+      - main # Adjust this to your main branch
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: 14
+
+      - name: Install Firebase CLI
+        run: npm install -g firebase-tools
+
+      - name: Authenticate with Firebase
+        run: |
+          echo ${{ secrets.FIREBASE_TOKEN }} | firebase login:ci --no-localhost
+
+      - name: Build and Deploy
+        run: |
+          firebase use ${{ secrets.FIREBASE_PROJECT }}
+          firebase deploy --only hosting
