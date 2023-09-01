@@ -2,6 +2,8 @@
 // Include your Firebase config here
 
 // Initialize Firebase
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
+
 import app from '../src/firebase-config.js';
 const auth = getAuth();
 
